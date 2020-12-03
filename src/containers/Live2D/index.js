@@ -7,7 +7,6 @@ class Live2D extends PureComponent {
                 <div className="waifu-tips"></div>
                 <canvas id="live2d" width="280" height="250" className="live2d"></canvas>
                 <div className="waifu-tool">
-                    <span class="fui-eye"></span>
                     <span className="fui-user"></span>
                 </div>
             </div>
