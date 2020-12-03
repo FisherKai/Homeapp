@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './containers/test';
 import reportWebVitals from './reportWebVitals';
+import Live2D from './containers/Live2D/index';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Live2D></Live2D>
   </React.StrictMode>,
   document.getElementById('root')
 );
