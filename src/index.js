@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Live2D from './containers/Live2D/index';
+import Home from './containers/home/home';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Live2D></Live2D>
+    <Home></Home>
   </React.StrictMode>,
   document.getElementById('root')
 );
