@@ -1,23 +1,23 @@
 import { PureComponent } from 'react';
 import Live2D from '../../components/Live2D/index';
 import { Menu, Image } from 'antd';
-import { getAllMeun } from '../../api/index';
+import { connect } from 'dva';
 
 const imageUrl = require('../../asset/image/Avatar.jpg');
+
 
 class Home extends PureComponent {
     state = {
         theme: 'dark',
-        meunList: []
+        menuList: []
     }
 
     componentDidMount() {
-        getAllMeun().then(res => {
-            console.log(res);
-            this.setState({
-                meunList: res.data.data
-            })
-        })
+        const { dispatch } = this.props;
+        dispatch({
+            type: 'home/fetchMenu',
+            payload: {},
+        });
     }
 
     handleClick = e => {
@@ -25,6 +25,7 @@ class Home extends PureComponent {
     };
 
     render() {
+        console.log(this.props)
         return (
             <div style={{ width: '100%', height: '100%' }}>
                 {/* 菜单栏 */}
@@ -36,7 +37,7 @@ class Home extends PureComponent {
                 >
                     <Image src={imageUrl.default} className="home-u-avatar" />
                     {
-                        this.state.meunList.map((e) => {
+                        this.props.home.menuList.map((e) => {
                             return (
                                 <Menu.Item key={e.id}>
                                     {e.meunname}
@@ -51,5 +52,6 @@ class Home extends PureComponent {
         )
     }
 }
-
-export default Home;
+export default connect(({ home }) => ({
+    home,
+}))(Home);

@@ -10,7 +10,7 @@ const app = dva({
   history: createHistory(),
 });
 
-// app.model(require('./models/home'));
+app.model(require('./models/home').default);
 
 app.router(require('./router').default);
 

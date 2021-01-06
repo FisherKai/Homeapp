@@ -4,4 +4,4 @@
 
 import ajax from './ajax';
 
-export const getAllMeun = () => ajax('/getAllMeun');
+export const getAllMenu = () => ajax('/getAllMenu');
