@@ -1,3 +1,6 @@
 {
-  "extends": "umi"
+    "plugins": [
+        "react"
+    ],
+    "parser": "babel-eslint"
 }
