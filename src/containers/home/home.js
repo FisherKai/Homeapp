@@ -28,7 +28,7 @@ class Home extends PureComponent {
     };
 
     render() {
-        console.log(this.props)
+        console.log(this.props.home.menuList)
         return (
             <div style={{ width: '100%', height: '100%' }}>
                 {/* 菜单栏 */}
@@ -42,8 +42,8 @@ class Home extends PureComponent {
                     {
                         this.props.home.menuList.map((e) => {
                             return (
-                                <Menu.Item key={e.meunurl}>
-                                    {e.meunname}
+                                <Menu.Item key={e.menu_path}>
+                                    {e.menu_name}
                                 </Menu.Item>
                             )
                         })

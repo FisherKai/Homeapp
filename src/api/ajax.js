@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://39.97.167.210:8080/HomeApp';
+const baseUrl = 'http://localhost:8088/Homeapp-api-v1';
 
 export default function ajax(url, data = {}, type = 'GET') {
     url = baseUrl + url
